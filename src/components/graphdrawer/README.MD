@@ -12,16 +12,14 @@ The component will work in any browser that supports the following:
 
 ## Demo
 
-There is a demo application available at 
+There is a demo application available at [https://github.com/kodsmed/graphdrawer-demopage](https://github.com/kodsmed/graphdrawer-demopage)
 
 A live demo is available at [https://graphdrawerdemo.netlify.app/](https://graphdrawerdemo.netlify.app/)
 
 ## Usage
 
 Copy the /components/graphdrawer folder into your project and import it into your code.
-An example of usage is provided in the root index.html and index.js files.
-Only the graphdrawer folder is required.  
-The surrounding code is just for test and demonstration purposes and not required for the graphdrawer to work.
+Public methods are documented in the jsdoc comments in the main graphdrawer.js file, as well in this readme.
 
 ## Testing
 
