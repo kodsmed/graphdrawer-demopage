@@ -41,6 +41,9 @@ function renderGraph () {
     let arrayToRender
     if (!isVerifiableInputIntegrity(arrayInput.value)) {
       // If not, try to render it anyway. just to get the error message.
+      console.log('input is not valid, trying to render it anyway.')
+      console.log('input: ' + arrayInput.value)
+      console.log('array: ' + unsafeStringToArrayConverter(arrayInput.value))
       arrayToRender = unsafeStringToArrayConverter(arrayInput.value)
     } else {
       // If it is, parse it as numbers and render it.
@@ -132,7 +135,7 @@ function setFontSettings () {
 
 
     // set the font settings.
-    graphdrawer.setFontSettings({ fontFamily: fontFamily, labelSize: labelSize, titleSize: titleSize })
+    graphdrawer.setFontSettings({ fontFamily: fontFamily, labelFontSize: parseInt(labelSize), titleFontSize: parseInt(titleSize) })
   } catch (error) {
     errorMessage.textContent = error.message
     renderButton.style.display = 'block'

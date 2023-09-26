@@ -46,7 +46,7 @@ export function unsafeStringToArrayConverter (untrustedUserInput) {
   }
 
   // if it contains any truely dangerous characters, return []
-  const containsDangerousCharacters = untrustedUserInput.match(/[<>\(\)\{\}\[\]\*\/\?\!\@\#\$\%\^\&\=\_\`\~\:\\'\";]/g) !== null
+  const containsDangerousCharacters = untrustedUserInput.match(/[<>\(\)\{\}\*\/\?\!\@\#\$\%\^\&\=\_\`\~\:\\'\";]/g) !== null
   if (containsDangerousCharacters) {
     return arrayToRender
   }
