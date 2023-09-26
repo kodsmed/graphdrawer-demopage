@@ -1,6 +1,16 @@
 # Graphdrawer
 
 Uses the canvas element to render an array of numerical data using the canvas element.
+It also does some automatic scaling of the data to fit the canvas element,  
+adapt the Y-axis to the range of the data, and the X-axis to the length of the data,  
+and it will render the data as a graph with a graphline and dots at the data points.  
+If zero is included in the data, it will also render a zero-line.
+
+You can also change several settings, like colors, font, size, etc.  
+All this are done by calling methods on the GraphDrawer element,  
+no bulky attributes,  
+no css, no javascript,  
+just a simple method call.
 
 ## Dependencies
 
