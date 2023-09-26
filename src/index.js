@@ -9,7 +9,9 @@ import { isVerifiableInputIntegrity, stringToArrayConverter, unsafeStringToArray
   */
 
 // Get the elements from the DOM.
+// most important is the graphdrawer element.
 const graphdrawer = document.querySelector('jk224jv-graphdrawer')
+
 const arrayInput = document.querySelector('#arrayInput')
 const renderButton = document.querySelector('#renderButton')
 const clearButton = document.querySelector('#clearButton')
@@ -20,10 +22,11 @@ const setFontSettingsButton = document.querySelector('#setFontSettingsButton')
 const errorMessage = document.querySelector('#errormessage')
 const resetButton = document.querySelector('#resetbutton')
 
+// Hide the error message and the reset button. until we need them.
 errorMessage.textContent = ''
 resetButton.style.display = 'none'
 
-// Add eventlisteners to the buttons.
+// Add event-listeners to the buttons.
 renderButton.addEventListener('click', renderGraph)
 clearButton.addEventListener('click', clearGraph)
 setColorButton.addEventListener('click', setColors)
@@ -37,7 +40,7 @@ resetButton.addEventListener('click', reset)
 function renderGraph () {
   errorMessage.textContent = ''
   try {
-    // Check if the input is valid.
+    // Check if the input is valid = just [] numbers , and .
     let arrayToRender
     if (!isVerifiableInputIntegrity(arrayInput.value)) {
       // If not, try to render it anyway. just to get the error message.
