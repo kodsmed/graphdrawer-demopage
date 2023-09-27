@@ -9,7 +9,7 @@ If zero is included in the data, it will also render a zero-line.
 You can also change several settings, like colors, font, size, etc.  
 All this are done by calling methods on the GraphDrawer element,  
 no bulky attributes,  
-no css, no javascript,  
+no css, no complicated javascript calculations, height this and width that,  
 just a simple method call.
 
 ## Dependencies
@@ -30,6 +30,7 @@ A live demo is available at [https://graphdrawerdemo.netlify.app/](https://graph
 
 Copy the /components/graphdrawer folder into your project and import it into your code.
 Public methods are documented in the jsdoc comments in the main graphdrawer.js file, as well in this readme.
+If you are unsure how to use the custom elements and call its methods, see the example usage in the demo application.
 
 ## Testing
 
