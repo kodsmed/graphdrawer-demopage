@@ -3,6 +3,8 @@
 This is a demo page for the graphdrawer web component, found in the components/graphdrawer folder.
 The graphdrawer is a web component that draws a graph from an array of numbers using the canvas element.
 
+![Screenshot of the demo page](./.readme/screenshot-demoapp.png)
+
 A live version of this demo page can be found at [https://graphdrawerdemo.netlify.app/](https://graphdrawerdemo.netlify.app/)
 
 You can use this demo page as a starting point for your own project... in that case you can just clone this repo and start coding.
