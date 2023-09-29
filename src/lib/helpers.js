@@ -22,7 +22,7 @@ export function isVerifiableInputIntegrity (untrustedUserInput) {
   const containsMultipleBrackets = untrustedUserInput.match(/\[/g).length > 1 || untrustedUserInput.match(/\]/g).length > 1
   const firstCharacterIsBracket = untrustedUserInput[0] === '['
   const lastCharacterIsBracket = untrustedUserInput[untrustedUserInput.length - 1] === ']'
-  const secondCharacterIsNotANumber = isNaN(untrustedUserInput[1])
+  const secondCharacterIsNotANumber = isNaN(untrustedUserInput[1]) && untrustedUserInput[1] !== '-'
   if (containsMultipleBrackets || !firstCharacterIsBracket || !lastCharacterIsBracket || secondCharacterIsNotANumber) {
     return false
   }
