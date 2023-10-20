@@ -17,5 +17,9 @@
   "devDependencies": {
     "@lnu/eslint-config": "^1.1.5",
     "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "graphdrawer": "github:kodsmed/graphdrawer#89049cd455939170293a84130442c86df9264736",
+    "validation-collection": "1.0.2"
   }
 }

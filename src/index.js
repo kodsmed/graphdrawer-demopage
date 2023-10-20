@@ -1,4 +1,4 @@
-import './components/graphdrawer/index.js'
+import 'graphdrawer/component'
 import { isVerifiableInputIntegrity, stringToArrayConverter, unsafeStringToArrayConverter } from './lib/helpers.js'
 
 /**
@@ -54,6 +54,7 @@ function renderGraph () {
     }
     graphdrawer.renderArrayAsGraph(arrayToRender)
   } catch (error) {
+    console.log(error)
     errorMessage.textContent = error.message
     renderButton.style.display = 'block'
   }
@@ -62,7 +63,7 @@ function renderGraph () {
 function clearGraph () {
   errorMessage.textContent = ''
   try {
-    graphdrawer.clear()
+    graphdrawer.clearCanvas()
   } catch (error) {
     errorMessage.textContent = error.message
     renderButton.style.display = 'block'
@@ -80,6 +81,7 @@ function setColors () {
     const labelColor = document.querySelector('#label-select').value
     const titleColor = document.querySelector('#title-select').value
     const backgroundColor = document.querySelector('#background-select').value
+    const guideLineColor = document.querySelector('#guideline-select').value
 
     const colorArgument = [
       { graphLineColor: lineColor },
@@ -88,7 +90,8 @@ function setColors () {
       { axisColor: axisColor },
       { labelColor: labelColor },
       { titleColor: titleColor },
-      { backgroundColor: backgroundColor }
+      { backgroundColor: backgroundColor },
+      { guideLineColor: guideLineColor }
     ]
 
     // set the colors.
